@@ -82,13 +82,17 @@ textarea {
 //    people.opera.com/patrickl/experiments/keyboard/test
 
 a {
+    // 1
+
 	&:focus {
-    	outline: thin dotted; // 1
+    	outline: thin dotted;
 	}
 
+    // 2
+    
 	&:hover,
 	&:active {
-    	outline: 0; // 2
+    	outline: 0;
 	}
 }
 
