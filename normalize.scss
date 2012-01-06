@@ -82,18 +82,19 @@ textarea {
 //    people.opera.com/patrickl/experiments/keyboard/test
 
 a {
+
     // 1
 
-	&:focus {
-    	outline: thin dotted;
-	}
+    &:focus {
+        outline: thin dotted;
+    }
 
     // 2
-    
-	&:hover,
-	&:active {
-    	outline: 0;
-	}
+
+    &:hover,
+    &:active {
+        outline: 0;
+    }
 }
 
 // =============================================================================
@@ -211,11 +212,11 @@ dd {
 }
 
 nav {
-	ul,
-	ol {
-    	list-style: none;
-    	list-style-image: none;
-	}
+    ul,
+    ol {
+        list-style: none;
+        list-style-image: none;
+    }
 }
 
 // =============================================================================
@@ -327,8 +328,8 @@ input[type="search"] {
     -webkit-box-sizing: content-box; // 2
     box-sizing: content-box;
     &::-webkit-search-decoration { // 3
-    	-webkit-appearance: none;
-	}
+        -webkit-appearance: none;
+    }
 }
 
 // Removes inner padding and border in FF3+
