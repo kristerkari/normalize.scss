@@ -311,11 +311,15 @@ input[type="submit"] {
 
 // 1. Addresses box sizing set to content-box in IE8/9
 // 2. Removes excess padding in IE8/9
+// 3. Removes excess padding in IE7
+//    Known issue: excess padding remains in IE6
 
 input[type="checkbox"],
 input[type="radio"] {
     box-sizing: border-box; // 1
     padding: 0; // 2
+    *height: 13px; // 3
+    *width: 13px; // 3
 }
 
 // 1. Addresses appearance set to searchfield in S5, Chrome
