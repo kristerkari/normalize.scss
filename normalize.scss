@@ -325,18 +325,14 @@ input[type="radio"] {
 
 // 1. Addresses appearance set to searchfield in S5, Chrome
 // 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
-// 3. Removes inner padding that is displayed in S5, Chrome on OS X
-// 4. Removes search cancel button in S5, Chrome on OS X
+// 3. Removes inner padding and search cancel button in S5, Chrome on OS X
 
 input[type="search"] {
     -webkit-appearance: textfield; // 1
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box; // 2
     box-sizing: content-box;
-    &::-webkit-search-decoration { // 3
-        -webkit-appearance: none;
-    }
-    &::-webkit-search-cancel-button { // 4
+    &::-webkit-search-decoration, &::-webkit-search-cancel-button { // 3
         -webkit-appearance: none;
     }
 }
