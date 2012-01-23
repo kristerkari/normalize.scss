@@ -55,20 +55,20 @@ html {
     -ms-text-size-adjust: 100%; // 2
 }
 
-// Addresses margins handled incorrectly in IE6/7
-
-body {
-    margin: 0;
-}
-
 // Addresses font-family inconsistency between 'textarea' and other form elements.
 
-body,
+html,
 button,
 input,
 select,
 textarea {
     font-family: sans-serif;
+}
+
+// Addresses margins handled incorrectly in IE6/7
+
+body {
+    margin: 0;
 }
 
 // =============================================================================
