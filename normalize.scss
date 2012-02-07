@@ -226,6 +226,8 @@ sub {
 // Lists
 // =============================================================================
 
+// Addresses margins set differently in IE6/7
+
 dl,
 menu,
 ol,
@@ -235,6 +237,12 @@ ul {
     margin: 1em 0;
 }
 
+dd {
+    margin: 0 0 0 40px;
+}
+
+// Addresses paddings set differently in IE6/7
+
 details,
 menu,
 ol,
@@ -242,9 +250,7 @@ ul {
     padding: 0 0 0 40px;
 }
 
-dd {
-    margin: 0 0 0 40px;
-}
+// Corrects list images handled incorrectly in IE7
 
 nav {
     ul,
