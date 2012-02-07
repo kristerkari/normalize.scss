@@ -114,11 +114,6 @@ h2 {
 
 h3 {
     font-size: 1.17em;
-}
-
-h3,
-p,
-pre {    
     margin: 1em 0;
 }
 
@@ -154,12 +149,6 @@ blockquote {
     margin: 1em 40px;
 }
 
-// Addresses styling not present in IE6/7
-
-hr {
-    margin: 0.5em auto;
-}
-
 // Addresses styling not present in S5, Chrome
 
 dfn {
@@ -171,6 +160,13 @@ dfn {
 mark {
     background: #ff0;
     color: #000;
+}
+
+// Addresses margins set differently in IE6/7
+
+p,
+pre {
+    margin: 1em 0;
 }
 
 // Corrects font family set oddly in IE6, S4/5, Chrome
