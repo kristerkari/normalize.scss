@@ -99,8 +99,8 @@ a {
 // Typography
 // =============================================================================
 
-// Neutralise smaller font-size in 'section' and 'article' in FF4+, Chrome, S5
-// Fix IE6/7 heading font-size not being relative to the root font-size
+// Addresses font sizes and margins set differently in IE6/7
+// Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
 
 h1 {
     font-size: 2em;
@@ -114,6 +114,11 @@ h2 {
 
 h3 {
     font-size: 1.17em;
+}
+
+h3,
+p,
+pre {    
     margin: 1em 0;
 }
 
@@ -147,6 +152,12 @@ strong {
 
 blockquote {
     margin: 1em 40px;
+}
+
+// Addresses styling not present in IE6/7
+
+hr {
+    margin: 0.5em auto;
 }
 
 // Addresses styling not present in S5, Chrome
@@ -231,8 +242,6 @@ sub {
 dl,
 menu,
 ol,
-p,
-pre,
 ul {
     margin: 1em 0;
 }
