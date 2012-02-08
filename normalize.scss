@@ -1,4 +1,14 @@
 // =============================================================================
+// Normalize settings
+// =============================================================================
+
+// Set to false if you want to drop support for IE6 and IE7
+// Notice: setting to false might render some elements
+// slightly differently than when set to true
+
+$support-for-ie6-and-ie7: true;
+
+// =============================================================================
 // HTML5 display definitions
 // =============================================================================
 
@@ -51,7 +61,9 @@ audio:not([controls]) {
 //    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
 
 html {
-    font-size: 100%; // 1
+    @if $support-for-ie6-and-ie7 {
+        font-size: 100%; // 1
+    }
     -webkit-text-size-adjust: 100%; // 2
     -ms-text-size-adjust: 100%; // 2
 }
@@ -146,8 +158,10 @@ strong {
     font-weight: bold; 
 }
 
-blockquote {
-    margin: 1em 40px;
+@if $support-for-ie6-and-ie7 {
+    blockquote {
+        margin: 1em 40px;
+    }
 }
 
 // Addresses styling not present in S5, Chrome
@@ -164,10 +178,11 @@ mark {
 }
 
 // Addresses margins set differently in IE6/7
-
-p,
-pre {
-    margin: 1em 0;
+@if $support-for-ie6-and-ie7 {
+    p,
+    pre {
+        margin: 1em 0;
+    }
 }
 
 // Corrects font family set oddly in IE6, S4/5, Chrome
@@ -178,7 +193,9 @@ code,
 kbd,
 samp {
     font-family: monospace, serif;
-    _font-family: 'courier new', monospace;
+    @if $support-for-ie6-and-ie7 {
+        _font-family: 'courier new', monospace;
+    }    
     font-size: 1em;
 }
 
@@ -194,9 +211,10 @@ pre {
 // 2. Addresses quote property not supported in S4
 
 // 1
-
-q {
-    quotes: none;
+@if $support-for-ie6-and-ie7 {
+    q {
+        quotes: none;
+    }
 }
 
 // 2
@@ -235,24 +253,28 @@ sub {
 // =============================================================================
 
 // Addresses margins set differently in IE6/7
-
-dl,
-menu,
-ol,
-ul {
-    margin: 1em 0;
+@if $support-for-ie6-and-ie7 {
+    dl,
+    menu,
+    ol,
+    ul {
+        margin: 1em 0;
+    }
 }
 
-dd {
-    margin: 0 0 0 40px;
+@if $support-for-ie6-and-ie7 {
+    dd {
+        margin: 0 0 0 40px;
+    }
 }
 
 // Addresses paddings set differently in IE6/7
-
-menu,
-ol,
-ul {
-    padding: 0 0 0 40px;
+@if $support-for-ie6-and-ie7 {
+    menu,
+    ol,
+    ul {
+        padding: 0 0 0 40px;
+    }
 }
 
 // Corrects list images handled incorrectly in IE7
@@ -261,7 +283,9 @@ nav {
     ul,
     ol {
         list-style: none;
-        list-style-image: none;
+        @if $support-for-ie6-and-ie7 {
+            list-style-image: none;
+        }    
     }
 }
 
@@ -275,7 +299,9 @@ nav {
 
 img {
     border: 0; // 1
-    -ms-interpolation-mode: bicubic; // 2
+    @if $support-for-ie6-and-ie7 {
+        -ms-interpolation-mode: bicubic; // 2
+    }    
 }
 
 // Corrects overflow displayed oddly in IE9
@@ -299,9 +325,10 @@ figure {
 // =============================================================================
 
 // Corrects margin displayed oddly in IE6/7
-
-form {
-    margin: 0;
+@if $support-for-ie6-and-ie7 {
+    form {
+        margin: 0;
+    }
 }
 
 // Define consistent border, margin, and padding
@@ -320,7 +347,9 @@ legend {
     border: 0; // 1
     padding: 0;
     white-space: normal; // 2
-    *margin-left: -7px; // 3
+    @if $support-for-ie6-and-ie7 {
+        *margin-left: -7px; // 3
+    }    
 }
 
 // 1. Corrects font size not being inherited in all browsers
@@ -334,7 +363,9 @@ textarea {
     font-size: 100%; // 1
     margin: 0; // 2
     vertical-align: baseline; // 3
-    *vertical-align: middle; // 3
+    @if $support-for-ie6-and-ie7 {
+        *vertical-align: middle; // 3
+    }    
 }
 
 // Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
@@ -355,7 +386,9 @@ input[type="reset"],
 input[type="submit"] {
     cursor: pointer; // 1
     -webkit-appearance: button; // 2
-    *overflow: visible;  // 3
+    @if $support-for-ie6-and-ie7 {
+        *overflow: visible;  // 3
+    }    
 }
 
 // Re-set default cursor for disabled elements
@@ -374,8 +407,10 @@ input[type="checkbox"],
 input[type="radio"] {
     box-sizing: border-box; // 1
     padding: 0; // 2
-    *height: 13px; // 3
-    *width: 13px; // 3
+    @if $support-for-ie6-and-ie7 {
+        *height: 13px; // 3
+        *width: 13px; // 3
+    }
 }
 
 // 1. Addresses appearance set to searchfield in S5, Chrome
