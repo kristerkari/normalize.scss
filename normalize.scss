@@ -40,10 +40,12 @@ video {
     }
 }
 
-// Prevents modern browsers from displaying 'audio' without controls
+// 1. Prevents modern browsers from displaying 'audio' without controls
+// 2. Remove excess height in iOS5 devices
 
 audio:not([controls]) {
-    display: none;
+    display: none; // 1
+    height: 0; // 2
 }
 
 // Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
