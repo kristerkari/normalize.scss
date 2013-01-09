@@ -6,7 +6,9 @@
 // Notice: setting to false might render some elements
 // slightly differently than when set to true
 
-$support-for-ie6-and-ie7: true;
+$support-for-ie6-and-ie7: true !default;
+$$normalized_font_family: sans-serif !default;
+
 
 // =============================================================================
 // HTML5 display definitions
@@ -79,7 +81,7 @@ button,
 input,
 select,
 textarea {
-    font-family: sans-serif;
+    font-family: $normalized_font_family;
 }
 
 // Addresses margins handled incorrectly in IE6/7
