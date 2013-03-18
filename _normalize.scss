@@ -8,10 +8,10 @@
 // =============================================================================
 
 
-// Set to false if you want to drop support for IE6 and IE7
-// Notice: setting to false might render some elements
-// slightly differently than when set to true
-$legacy_support_for_ie: false; // Used also in Compass
+// Set to true if you want to add support for IE6 and IE7
+// Notice: setting to true might render some elements
+// slightly differently than when set to false
+$legacy_support_for_ie: false !default; // Used also in Compass
 
 
 // Set the default font family here so you don't have to override it later
@@ -53,12 +53,16 @@ summary {
     display: block;
 }
 
-// Corrects inline-block display not defined in 8/9
+// Corrects inline-block display not defined in IE6/7/8/9 & FF3
 
 audio,
 canvas,
 video {
     display: inline-block;
+    @if $legacy_support_for_ie {
+        *display: inline;
+        *zoom: 1;
+    }
 }
 
 // 1. Prevents modern browsers from displaying 'audio' without controls
