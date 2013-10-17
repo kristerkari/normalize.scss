@@ -1,6 +1,6 @@
 // =============================================================================
 // Normalize.scss based on Nicolas Gallagher and Jonathan Neal's
-// normalize.css v2.1.1 | MIT License | git.io/normalize
+// normalize.css v2.1.3 | MIT License | git.io/normalize
 // =============================================================================
 
 // =============================================================================
@@ -76,9 +76,12 @@ audio:not([controls]) {
     height: 0; // 2
 }
 
-// Addresses styling for 'hidden' attribute not present in IE8/9
+//
+// Address `[hidden]` styling not present in IE 8/9.
+// Hide the `template` element in IE, Safari, and Firefox < 22.
+//
 
-[hidden] {
+[hidden], template {
     display: none;
 }
 
@@ -121,19 +124,23 @@ body {
 // Links
 // =============================================================================
 
-// 1. Addresses outline displayed oddly in Chrome
-// 2. Improves readability when focused and also mouse hovered in all browsers
+// 1. Remove the gray background color from active links in IE 10.
+// 2. Addresses outline displayed oddly in Chrome
+// 3. Improves readability when focused and also mouse hovered in all browsers
 //    people.opera.com/patrickl/experiments/keyboard/test
 
 a {
-
     // 1
+    
+    background: transparent;
+
+    // 2
 
     &:focus {
         outline: thin dotted;
     }
 
-    // 2
+    // 3
 
     &:hover,
     &:active {
@@ -455,8 +462,8 @@ input[disabled] {
     cursor: default;
 }
 
-// 1. Addresses box sizing set to content-box in IE8/9
-// 2. Removes excess padding in IE8/9
+// 1. Address box sizing set to `content-box` in IE 8/9/10.
+// 2. Remove excess padding in IE 8/9/10.
 // 3. Removes excess padding in IE7
 //    Known issue: excess padding remains in IE6
 
