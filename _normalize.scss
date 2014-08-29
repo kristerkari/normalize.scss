@@ -267,11 +267,11 @@ q {
 
 // 2
 q {
-	&:before, 
-	&:after {
-		content: '';
+    &:before, 
+    &:after {
+        content: '';
     	content: none;	
-	}
+    }
 }
 
 // Address inconsistent and variable font size in all browsers.
