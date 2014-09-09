@@ -423,7 +423,7 @@ textarea {
 
 // Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
 
-button {
+button, input {
     line-height: normal;
 }
 
@@ -466,7 +466,7 @@ input[disabled] {
 // Removes inner padding and border in FF3+
 // www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
 
-button {
+button, input {
     &::-moz-focus-inner {
         border: 0;
         padding: 0;
@@ -493,7 +493,6 @@ table {
 }
 
 input {
-    line-height: normal;
     // 1. Addresses appearance set to searchfield in S5, Chrome
     // 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
     &[type="search"] {
@@ -522,10 +521,5 @@ input {
         	*height: 13px; // 3
         	*width: 13px; // 3
     	}
-    }
-    
-    &::-moz-focus-inner {
-        border: 0;
-        padding: 0;
     }
 }
